@@ -1,7 +1,6 @@
 (function(){
   "use strict";
 
-
   var screen = document.getElementById('screen');
   var clearKey = document.getElementById('clear-key');
 
@@ -13,21 +12,27 @@
   var operators = document.querySelectorAll('.operator');
   // console.log(operators);
 
-  function clearScreenHandler(event){
-    screen.textContent = 0;
-  }
-
   // handle events on number buttons
   function pushNumberHandler(event){
     var number = this.textContent;
     console.log('You pushed the number ' + number + '!');
+
+    // if 0 is onscreen, replace it
+    if(screen.textContent == '0'){
+      screen.textContent = '';
+    }
+    
     screen.textContent += number;
+
   }
 
   // handle events on operator buttons
   function pushOperatorHandler(event){
     console.log('You pushed the ' + this.textContent + ' operator!');
+  }
 
+  function clearScreenHandler(event){
+    screen.textContent = 0;
   }
 
   // add event listner to each number node
