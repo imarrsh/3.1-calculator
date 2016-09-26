@@ -15,16 +15,19 @@
 
   function clearScreenHandler(event){
     screen.textContent = 0;
-  };
+  }
 
+  // handle events on number buttons
   function pushNumberHandler(event){
     var number = this.textContent;
     console.log('You pushed the number ' + number + '!');
     screen.textContent += number;
   }
 
+  // handle events on operator buttons
   function pushOperatorHandler(event){
     console.log('You pushed the ' + this.textContent + ' operator!');
+
   }
 
   // add event listner to each number node
