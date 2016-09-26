@@ -1,0 +1,44 @@
+@import 'variables';
+
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.calculator {
+  font-size: 0;
+  .screen {
+   background-color: rgba(0,0,0, 0.5);
+   text-align: right;
+   padding: 20px;
+   color: #ffffff;
+   font-size: 30px;
+  }
+  button {
+    background-color: #E0E0E0;
+    width: 25%;
+    border: none;
+    border-right: 1px solid #8E8E8E;
+    border-bottom: 1px solid #8E8E8E;
+    font-size: 20px;
+    padding: 15px;
+    &:active {
+      background-color: darken(#E0E0E0, 20%);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .zero{
+    width: 50%;
+  }
+  .operator {
+    background-color: #F49240;
+    color: #ffffff;
+    &:active {
+      background-color: darken(#F49240, 20%);
+
+    }
+  }
+}
