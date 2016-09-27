@@ -1,6 +1,7 @@
 (function(){
   "use strict";
 
+  var calculator = document.getElementById('calculator');
   var screen = document.getElementById('screen');
   var clearKey = document.getElementById('clear-key');
   var equals = document.getElementById('equals');
@@ -29,7 +30,7 @@
     if(screen.textContent == '0' || (currentOperator)){
       screen.textContent = '';
     }
-    
+
     for(i = 0; i < operators.length ; i++){
       operators[i].classList.remove('operating');
     }
@@ -44,7 +45,7 @@
     currentOperator = this.textContent;
     console.log('You pushed the ' + currentOperator + ' operator!');
 
-    // style which operator is being used
+    // add styles which operator is being used
     for(i = 0; i < operators.length ; i++){
       operators[i].classList.remove('operating');
     }
@@ -57,6 +58,13 @@
     console.log(calculation);
   }
 
+  function pushPercentHandler(){
+    var num = parseInt(screen.textContent);
+
+    var converted = num / 100;
+    console.log(converted);
+    screen.textContent = converted;
+  }
 
   // function for clearing the calc screen
   function clearScreen(){
@@ -161,6 +169,10 @@
 
   clearKey.addEventListener('click', clearHandler);
   equals.addEventListener('click', calculate);
+  percent.addEventListener('click', pushPercentHandler);
 
+  calculator.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
 
 }());

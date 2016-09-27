@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 
   <title>Simple Calculator</title>
 
@@ -11,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <article class="calculator">
+    <article id="calculator" class="calculator">
       <div id="screen" class="screen">0</div>
 
       <div class="controls">
@@ -21,7 +23,7 @@
             <div class="col-xs-12">
               <button class="top-row" id="clear-key">AC</button>
               <button class="top-row" id="change-sign">&plusmn;</button>
-              <button class="top-row" id="percent">%</button>
+              <button id="percent" class="top-row">%</button>
               <button class="operator" id="divide">&divide;</button>
             </div>
           </div>
