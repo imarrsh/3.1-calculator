@@ -5824,17 +5824,22 @@ body {
     border-right: 1px solid #8E8E8E;
     border-bottom: 1px solid #8E8E8E;
     font-size: 20px;
-    padding: 15px; }
+    padding: 15px;
+    user-select: none;
+    transition: all 200ms linear; }
     .calculator button:active {
-      background-color: #adadad; }
+      background-color: #c7c7c7;
+      transition: all 1ms linear; }
     .calculator button:focus {
       outline: none; }
+    .calculator button:last-child {
+      background-color: #F49240;
+      color: #ffffff; }
+      .calculator button:last-child:active {
+        background-color: #f17610; }
   .calculator .zero {
     width: 50%; }
-  .calculator .operator {
-    background-color: #F49240;
-    color: #ffffff; }
-    .calculator .operator:active {
-      background-color: #c35f0b; }
+  .calculator .operating {
+    box-shadow: inset 0 0 3px 3px #c35f0b; }
 
 /*# sourceMappingURL=styles.css.map */
