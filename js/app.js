@@ -27,7 +27,7 @@
     console.log('You pushed the number ' + number + '!');
 
     // if 0 is onscreen, replace it
-    if(screen.textContent == '0' || (currentOperator)){
+    if(screen.textContent == '0'){
       screen.textContent = '';
     }
 
@@ -55,7 +55,7 @@
     operand1 = screen.textContent;
     // calculation.push(operand1);
 
-    console.log(calculation);
+    // console.log(calculation);
   }
 
   function pushPercentHandler(){
@@ -73,7 +73,8 @@
   // function to handle the clearing function of calculator
   function clearHandler(event){
     clearScreen();
-    calculation = [];
+    // console.clear();
+    // calculation = [];
     currentOperator = '';
     for(i = 0; i < operators.length ; i++){
       operators[i].classList.remove('operating');
@@ -91,8 +92,8 @@
 
   // calculator functions
   function add(op1, op2){
-    var op1 = parseInt(op1);
-    var op2 = parseInt(op2);
+    op1 = parseInt(op1);
+    op2 = parseInt(op2);
 
     var result = op1 + op2;
     console.log('adding', op1, 'and', op2);
@@ -100,8 +101,8 @@
   }
 
   function subtract(op1, op2){
-    var op1 = parseInt(op1);
-    var op2 = parseInt(op2);
+    op1 = parseInt(op1);
+    op2 = parseInt(op2);
 
     var result = op1 - op2;
     console.log('subtracting', op1, 'and', op2);
@@ -110,8 +111,8 @@
   }
 
   function multiply(op1, op2){
-    var op1 = parseInt(op1);
-    var op2 = parseInt(op2);
+    op1 = parseInt(op1);
+    op2 = parseInt(op2);
 
     var result = op1 * op2;
     console.log('multiplying', op1, 'and', op2);
@@ -119,15 +120,15 @@
   }
 
   function divide(op1, op2){
-    var op1 = parseInt(op1);
-    var op2 = parseInt(op2);
+    op1 = parseInt(op1);
+    op2 = parseInt(op2);
 
     var result = op1 / op2;
     console.log('dividing', op1, 'and', op2);
     return result;
   }
 
-  var calculation = [];
+  // var calculation = [];
 
   function calculate(){
     var result;
@@ -171,8 +172,8 @@
   equals.addEventListener('click', calculate);
   percent.addEventListener('click', pushPercentHandler);
 
-  calculator.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-  });
+  // calculator.addEventListener('gesturestart', function (e) {
+  //   e.preventDefault();
+  // });
 
 }());
